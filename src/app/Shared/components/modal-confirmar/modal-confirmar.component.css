@@ -1,0 +1,28 @@
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    max-width: 75%;
+
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 10em;
+}
