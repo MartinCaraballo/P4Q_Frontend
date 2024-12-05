@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.main {
+    display: flex;
+    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    width: 20%;
+    background: linear-gradient(to bottom, #d933ff 20%, #b040ff, #00ccff);
+}
+
+.left__content h1 {
+    color: white;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.right__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    background-color: white;
+    width: 80%;
+    background: transparent;
+}
+
+.register {
+    min-width: 350px;
+    margin-top: 5rem;
+}
+
+.form-group input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-group p {
+    text-align: center;
+}
+
+.register__link {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error-message {
+    color: rgba(255, 0, 0, 0.6);
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 1230px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left__content {
+        width: 100% !important;
+        padding: 3rem 0 !important;
+    }
+
+    .left__content h1 {
+        font-size: 20pt !important;
+    }
+
+    .right__content {
+        padding: 1rem 0 !important;
+        width: 100% !important;
+        height: fit-content !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .register__form {
+        width: 80%;
+    }
+
+    .register {
+        padding-left: 20%;
+    }
+}
