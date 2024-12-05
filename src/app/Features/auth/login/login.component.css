@@ -56,6 +56,12 @@
     background-color: #007bff;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .form-group p {
@@ -64,6 +70,13 @@
 
 .register__link {
     color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error-message {
+    color: rgba(255, 0, 0, 0.6);
+    padding-bottom: 0.5rem;
 }
 
 @media (max-width: 1230px) {

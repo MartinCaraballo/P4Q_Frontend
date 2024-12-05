@@ -7,23 +7,32 @@
     <div class="login">
       <h2>Login</h2>
 
-      <form class="login__form">
+      <form class="login__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="email">Email</label> <br />
-          <input type="email" id="email" name="email" placeholder="Email" required/> <br />
+          <input type="email" id="email" name="email" placeholder="Email" formControlName="email" required/> <br />
+          <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" class="error-message">
+            Email es requerido
+          </div>
+          <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="error-message">
+            Email inválido
+          </div>
         </div>
         
         <div class="form-group">
           <label for="password">Password</label> <br />
-          <input type="password" id="password" name="password" placeholder="Value" required/> <br />
+          <input type="password" id="password" name="password" placeholder="Value" formControlName="password" required/> <br />
+          <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched" class="error-message">
+            Password es requerido
+          </div>
         </div>
 
         <div class="form-group">
-          <button type="submit">Login</button>
+          <button type="submit" [disabled]="!loginForm.valid">Login</button>
         </div>
 
         <div class="form-group" style="text-align: center;">
-          <p style="font-size: 10pt;">¿No tenes una cuenta todavia? <a class="register__link"href="/register">Registrate</a></p>
+          <p style="font-size: 10pt;">¿No tenes una cuenta todavia? <a class="register__link" (click)="onClickRegister()">Registrate</a></p> 
         </div>
       </form>
     </div>
