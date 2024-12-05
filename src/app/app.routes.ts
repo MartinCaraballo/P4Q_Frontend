@@ -4,23 +4,29 @@ import { RegisterComponent } from './Features/auth/register/register.component';
 //import { AuthGuard } from './Core/guards/auth.guard';
 //import { NoAuthGuard } from './Core/guards/no-auth.guard';
 
-import { ModalCrearTicketComponent } from '../app/Shared/components/modal-crear-ticket/modal-crear-ticket.component'; // Ajusta la ruta según la ubicación real del componente
-
 export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    //canActivate: [NoAuthGuard], // Si está logueado, redirige al dashboard
   },
   {
     path: 'register',
-    component: RegisterComponent,
+    component: RegisterComponent
+    //canActivate: [NoAuthGuard],
   },
-  {
-    path: 'crear-ticket',
-    component: ModalCrearTicketComponent, // Nuevo componente para "Crear Ticket"
-  },
+  
+  /*{
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard], 
+  },*/
   {
     path: '**',
-    redirectTo: '/login',
+    redirectTo: '/login', // Ruta comodín redirige al login si no esta logged :D
+    //canActivate: [NoAuthGuard],
   },
+
 ];
+
+//Eventualmente descomentare las cosas una vez el login funcione
