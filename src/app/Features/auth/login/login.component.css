@@ -30,18 +30,25 @@
     padding: 10rem;
     background-color: white;
     width: 80%;
+    background: transparent;
+}
+
+.login {
+    min-width: 350px;
+    margin-top: 5rem;
 }
 
 .form-group input {
-    width: 100%;
+    width: calc(100% - 24px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: transparent;
 }
 
 .form-group button {
-    width: calc(100% + 23px);
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -57,4 +64,35 @@
 
 .register__link {
     color: black;
+}
+
+@media (max-width: 1230px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left__content {
+        width: 100% !important;
+        padding: 3rem 0 !important;
+    }
+
+    .left__content h1 {
+        font-size: 20pt !important;
+    }
+
+    .right__content {
+        padding: 1rem 0 !important;
+        width: 100% !important;
+        height: fit-content !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .login__form {
+        width: 80%;
+    }
+
+    .login {
+        padding-left: 20%;
+    }
 }
