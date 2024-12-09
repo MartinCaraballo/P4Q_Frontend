@@ -5,7 +5,7 @@
 
   <div class="right__content">
     <div class="login">
-      <h2>Login</h2>
+      <h2>Inicia Sesión</h2>
 
       <form class="login__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -20,19 +20,19 @@
         </div>
         
         <div class="form-group">
-          <label for="password">Password</label> <br />
-          <input type="password" id="password" name="password" placeholder="Value" formControlName="password" required/> <br />
+          <label for="password">Contraseña</label> <br />
+          <input type="password" id="password" name="password" placeholder="Contraseña" formControlName="password" required/> <br />
           <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched" class="error-message">
-            Password es requerido
+            Contraseña es requerido
           </div>
         </div>
 
         <div class="form-group">
-          <button type="submit" [disabled]="!loginForm.valid">Login</button>
+          <button type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</button>
         </div>
 
         <div class="form-group" style="text-align: center;">
-          <p style="font-size: 10pt;">¿No tenes una cuenta todavia? <a class="register__link" (click)="onClickRegister()">Registrate</a></p> 
+          <p style="font-size: 10pt;">¿No tenes una cuenta todavía? <a class="register__link" (click)="onClickRegister()">Registrate</a></p> 
         </div>
       </form>
     </div>
